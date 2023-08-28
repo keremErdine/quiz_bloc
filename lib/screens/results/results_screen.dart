@@ -1,7 +1,7 @@
 import 'package:adv_basics/bloc/app_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:adv_basics/data/questions.dart';
-import 'package:adv_basics/questions_summary/questions_summary.dart';
+import 'package:adv_basics/screens/results/widgets/questions_summary/questions_summary.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 
