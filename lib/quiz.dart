@@ -1,10 +1,10 @@
 import 'package:adv_basics/bloc/app_bloc.dart';
 import 'package:flutter/material.dart';
 
-import 'package:adv_basics/start_screen.dart';
+import 'package:adv_basics/screens/start/start_screen.dart';
 import 'package:adv_basics/questions_screen.dart';
 
-import 'package:adv_basics/results_screen.dart';
+import 'package:adv_basics/screens/results/results_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Quiz extends StatelessWidget {
