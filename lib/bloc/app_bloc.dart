@@ -6,19 +6,19 @@ part 'app_state.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
   AppState questionAnswered(String selectedAnswer) {
-    if (state.selectedAnswers!.length == questions.length - 1) {
+    if (state.selectedAnswers.length == questions.length - 1) {
       return state.copyWith(
           selectedAnswers: state.copyAnswersWith(selectedAnswer),
           activeScreen: 'results-screen');
     } else {
       return state.copyWith(
           currentQuestionIndex: state.currentQuestionIndex =
-              state.currentQuestionIndex! + 1,
+              state.currentQuestionIndex + 1,
           selectedAnswers: state.copyAnswersWith(selectedAnswer));
     }
   }
 
-  AppBloc() : super(AppState()) {
+  AppBloc() : super(AppState.create()) {
     on<AppQuestionAnswerButtonPressed>((event, emit) {
       emit(questionAnswered(event.selectedAnswer));
     });

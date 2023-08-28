@@ -6,14 +6,14 @@ enum AppStatus {
 
 class AppState {
   AppState(
-      {this.status,
-      this.selectedAnswers,
-      this.currentQuestionIndex,
-      this.activeScreen});
+      {required this.status,
+      required this.selectedAnswers,
+      required this.currentQuestionIndex,
+      required this.activeScreen});
 
-  AppStatus? status = AppStatus.initial;
-  List<String>? selectedAnswers = [];
-  int? currentQuestionIndex = 0;
+  AppStatus status = AppStatus.initial;
+  List<String> selectedAnswers = [];
+  int currentQuestionIndex = 0;
   String? activeScreen = 'start-screen';
 
   AppState copyWith(
@@ -29,8 +29,16 @@ class AppState {
   }
 
   List<String> copyAnswersWith(String answer) {
-    List<String> copiedAnswers = selectedAnswers!;
+    List<String> copiedAnswers = selectedAnswers;
     copiedAnswers.add(answer);
     return copiedAnswers;
+  }
+
+  factory AppState.create() {
+    return AppState(
+        status: AppStatus.initial,
+        selectedAnswers: [],
+        currentQuestionIndex: 0,
+        activeScreen: 'start-screen');
   }
 }
