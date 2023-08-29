@@ -2,7 +2,7 @@ import 'package:adv_basics/bloc/app_bloc.dart';
 import 'package:flutter/material.dart';
 
 import 'package:adv_basics/screens/start/start_screen.dart';
-import 'package:adv_basics/questions_screen.dart';
+import 'package:adv_basics/screens/questions/questions_screen.dart';
 
 import 'package:adv_basics/screens/results/results_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
